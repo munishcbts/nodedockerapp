@@ -1,14 +1,6 @@
 version: "3"
 services:
 
-  munishlearn_mysql: 
-    image: mysql:8.0
-    volumes:
-      - munish_learn_mysql:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: munish
-      MYSQL_DATABASE: munishlearn
-
   app:
     image: node:16-alpine
     command: sh -c "npm install && node index.js"
@@ -22,6 +14,3 @@ services:
       MYSQL_USERNAME: root
       MYSQL_PASSWORD: munish
       MYSQL_DB: munishlearn
-
-volumes:
-  munish_learn_mysql:

@@ -1,0 +1,12 @@
+version: "3"
+services:
+  munishlearn_mysql: 
+    image: mysql:8.0
+    volumes:
+      - munish_learn_mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: munish
+      MYSQL_DATABASE: munishlearn
+
+volumes:
+  munish_learn_mysql:
